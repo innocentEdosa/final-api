@@ -93,7 +93,7 @@ describe('Questioner Api', () => {
       request.post('http://localhost:3004/api/v1/questions', {
         json: {
           createdBy: 2,
-          meetup: 4,
+          meetup: 3,
           title: 'the fouth question',
           body: 'lorem is the body of this question',
         },
