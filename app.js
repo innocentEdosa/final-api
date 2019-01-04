@@ -26,6 +26,9 @@ const rsvpRoutes = require('./routes/rsvp');
 app.use('/api/v1/meetups', meetupRoutes);
 app.use('/api/v1/questions', questionRoutes);
 app.use('/api/v1/meetups/:meetup/rsvp', rsvpRoutes);
+app.use('', (req, res) => {
+  res.status(404).json({ error: 'Page not found! Use only specified endpoints'});
+});
 
 const server = http.createServer(app);
 server.listen(process.env.PORT || 3004);
