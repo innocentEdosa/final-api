@@ -50,4 +50,14 @@ module.exports = class Meetup {
     }
     return -1;
   }
+
+  static getUpcomingMeetup() {
+    const upcoming = [];
+    for (let i = 0; i < meetup.length; i += 1) {
+      if (meetup[i].happeningOn > new Date()) {
+        upcoming.push(meetup[i]);
+      }
+    }
+    return upcoming;
+  }
 };
