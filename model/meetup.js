@@ -39,4 +39,15 @@ module.exports = class Meetup {
     return meetup;
   }
 
+  static findMeetup(meetupId) {
+    const Id = Number(meetupId);
+    const found = [];
+    for (let i = 0; i < meetup.length; i += 1) {
+      if (meetup[i].id === Id) {
+        found.push(meetup[i]);
+        return found;
+      }
+    }
+    return -1;
+  }
 };
