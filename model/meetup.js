@@ -34,4 +34,9 @@ module.exports = class Meetup {
     this.createdBy = createdBy;
     meetup.push(this);
   }
+
+  static getAll() {
+    return meetup;
+  }
+
 };
