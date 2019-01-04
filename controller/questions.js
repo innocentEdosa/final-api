@@ -27,3 +27,18 @@ exports.createQuestion = (req, res) => { // handles the creation of new question
   question.create(createdBy, meetup, title, body);
   return res.status(201).json({ status: 201, data: question });
 };
+
+exports.vote = votetype => (req, res) => {
+  const { questionId } = req.params;
+  let vote;
+  if (votetype === 'upvote') {
+    vote = Question.upvote(questionId);
+  }
+  if (votetype === 'downvote') {
+    vote = Question.downvote(questionId);
+  }
+  if (vote < 0) {
+    return res.status(404).json({ status: 404, error: 'This question does not exist' });
+  }
+  return res.status(200).json({ status: 200, data: vote });
+};
