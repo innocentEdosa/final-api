@@ -73,7 +73,7 @@ describe('Questioner Api', () => {
   describe('GET /meetups/:meetup', () => {
     const data = {};
     beforeAll((done) => {
-      request.get('http://localhost:3004/api/v1/meetups/1', (error, res, body) => {
+      request.get('http://localhost:3004/api/v1/meetups/3', (error, res, body) => {
         data.status = res.statusCode;
         data.body = JSON.parse(body);
         done();
