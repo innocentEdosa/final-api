@@ -50,5 +50,4 @@ module.exports = class Meetup {
     }
     return -1;
   }
-
 };
