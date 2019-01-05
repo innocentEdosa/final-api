@@ -1,4 +1,4 @@
-# final-api
+# Questioner-api
 
 [![Build Status](https://travis-ci.org/innocentEdosa/questioner-api.svg?branch=develop)](https://travis-ci.org/innocentEdosa/questioner-api)
 
